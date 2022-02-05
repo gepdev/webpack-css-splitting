@@ -1,16 +1,23 @@
+const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
+  mode: "production",
   entry() {
-    return {}
+    return {
+      index: "./src/index.js"
+    }
   },
-  output: {},
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].bundle.js"
+  },
   plugins: [
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: devMode ? "[name].css" : "[name].[contenthash].css",
-      chunkFilename: devMode ? "[id].css" : "[id].[contenthash].css",
+      filename: "[name].[contenthash].css",
+      chunkFilename: "[id].[contenthash].css",
     })
   ],
   module: {
