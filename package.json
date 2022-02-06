@@ -1,23 +1,32 @@
 {
   "name": "webpack-css-splitting",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/gepdev/webpack-css-splitting.git",
   "author": "Gentian Polovina <gentip@gmail.com>",
   "license": "MIT",
+  "private": true,
   "scripts": {
-    "dev": "npx webpack --mode development",
-    "build": "npx webpack --mode production"
+    "dev": "webpack serve --config ./config/webpack.config.dev.js",
+    "build": "webpack build --config ./config/webpack.config.prod.js",
+    "build:theme-a": "THEME=theme-a webpack build --config ./config/webpack.config.prod.js"
   },
   "devDependencies": {
     "css-loader": "^6.6.0",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
     "postcss": "^8.4.6",
     "postcss-loader": "^6.2.1",
+    "posthtml": "^0.16.5",
+    "posthtml-extend": "^0.6.2",
+    "posthtml-include": "^1.7.2",
+    "posthtml-loader": "^2.0.1",
     "sass": "^1.49.7",
     "sass-loader": "^12.4.0",
     "webpack": "^5.68.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "bootstrap": "^5.1.3"

@@ -4,20 +4,20 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 module.exports = {
   entry() {
     return {
-      index: "./src/index.js",
-      style: "./src/style.js"
+      index: ["./src/scss/theme-a/common.scss", "./src/index.js"]
     }
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].bundle.js"
+    path: path.resolve(__dirname, "../dist"),
+    filename: "[name].bundle.js",
+    clean: true
   },
   plugins: [
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "[name].[contenthash].css",
-      chunkFilename: "[id].[contenthash].css",
+      filename: "[name].bundle.css",
+      chunkFilename: "[id].chunk.css",
     })
   ],
   module: {
@@ -39,8 +39,7 @@ module.exports = {
         common: {
           name: 'common',
           test: /common\.s?css$/,
-          chunks: all,
-          enforce: true
+          chunks: 'all'
         }
       }
     }
