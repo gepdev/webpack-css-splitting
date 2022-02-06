@@ -1,10 +1,24 @@
 const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const glob = require("glob")
+
+const cssFIles = glob.sync("./src/scss/theme-a/*.scss")
+const cacheGroups = cssFIles.reduce((acc, value) => {
+  const name = path.basename(value, ".scss")
+  acc[name] = {
+    name,
+    type: "css/mini-extract",
+    test: new RegExp(`${name}\\.s?css$`),
+    chunks: 'initial',
+    enforce: true
+  }
+  return acc
+}, {})
 
 module.exports = {
   entry() {
     return {
-      index: ["./src/scss/theme-a/common.scss", "./src/index.js"]
+      index: [...cssFIles, "./src/index.js"]
     }
   },
   output: {
@@ -14,10 +28,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "[name].bundle.css",
-      chunkFilename: "[id].chunk.css",
+      filename: "[name].bundle.css"
     })
   ],
   module: {
@@ -35,13 +46,7 @@ module.exports = {
   },
   optimization: {
     splitChunks: {
-      cacheGroups: {
-        common: {
-          name: 'common',
-          test: /common\.s?css$/,
-          chunks: 'all'
-        }
-      }
+      cacheGroups
     }
   }
 }

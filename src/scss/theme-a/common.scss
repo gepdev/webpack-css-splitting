@@ -1,1 +1,4 @@
-@forward "../../../node_modules/bootstrap/scss/bootstrap";
+@use "config/variables" as config;
+@use "../../../node_modules/bootstrap/scss/bootstrap" with (
+  $theme-colors: config.$theme-colors
+);
