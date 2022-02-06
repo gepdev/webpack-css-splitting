@@ -5,6 +5,10 @@
   "repository": "https://github.com/gepdev/webpack-css-splitting.git",
   "author": "Gentian Polovina <gentip@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "npx webpack --mode development",
+    "build": "npx webpack --mode production"
+  },
   "devDependencies": {
     "css-loader": "^6.6.0",
     "mini-css-extract-plugin": "^2.5.3",

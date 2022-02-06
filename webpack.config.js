@@ -2,10 +2,10 @@ const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
-  mode: "production",
   entry() {
     return {
-      index: "./src/index.js"
+      index: "./src/index.js",
+      style: "./src/style.js"
     }
   },
   output: {
@@ -32,5 +32,17 @@ module.exports = {
         ]
       }
     ]
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        common: {
+          name: 'common',
+          test: /common\.s?css$/,
+          chunks: all,
+          enforce: true
+        }
+      }
+    }
   }
 }
