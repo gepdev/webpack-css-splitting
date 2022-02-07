@@ -2,8 +2,8 @@ const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const glob = require("glob")
 
-const cssFIles = glob.sync("./src/scss/theme-a/*.scss")
-const cacheGroups = cssFIles.reduce((acc, value) => {
+const cssFiles = glob.sync("./src/scss/theme-a/*.scss")
+const cacheGroups = cssFiles.reduce((acc, value) => {
   const name = path.basename(value, ".scss")
   acc[name] = {
     name,
@@ -18,7 +18,7 @@ const cacheGroups = cssFIles.reduce((acc, value) => {
 module.exports = {
   entry() {
     return {
-      index: [...cssFIles, "./src/index.js"]
+      index: [...cssFiles, "./src/index.js"]
     }
   },
   output: {
