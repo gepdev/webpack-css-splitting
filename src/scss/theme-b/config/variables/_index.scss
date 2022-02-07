@@ -1,0 +1,170 @@
+//editorials
+$slate: #34303d;
+$soft-white: #fffdfb;
+$hard-white: #f6f4f0;
+$turquoise: #00d1d2;
+$amber: #e27d34;
+$deep-red: #a22f26;
+$red: #db3826;
+$blue: #2980b5;
+$yellow: #ffd040;
+//signals
+$signal-green: #57760c;
+$signal-amber: #e5b052;
+$signal-red: #c73636;
+//slate
+$slate-05-no-opacity: #f7f7f7;
+$slate-15-no-opacity: #e1e0e2;
+$slate-30-no-opacity: #b8b7bb;
+$slate-50-no-opacity: #99979e;
+$slate-65-no-opacity: #7b7881;
+$slate-85-no-opacity: #524f5a;
+$slate-05: rgba($slate, 0.05);
+$slate-15: rgba($slate, 0.15);
+$slate-30: rgba($slate, 0.3);
+$slate-50: rgba($slate, 0.5);
+$slate-65: rgba($slate, 0.65);
+$slate-85: rgba($slate, 0.85);
+$soft-white-05: rgba($soft-white, 0.05);
+$soft-white-15: rgba($soft-white, 0.15);
+$soft-white-30: rgba($soft-white, 0.3);
+$soft-white-50: rgba($soft-white, 0.5);
+$soft-white-65: rgba($soft-white, 0.65);
+$soft-white-85: rgba($soft-white, 0.85);
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$orange: #fd7e14;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+$primary: $slate;
+$secondary: $turquoise;
+$success: $signal-green;
+$info: $cyan;
+$warning: $signal-amber;
+$danger: $signal-red;
+$light: $soft-white;
+$dark: $slate;
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  //4px
+  2: $spacer * 0.5,
+  //8px
+  3: $spacer,
+  //16px
+  4: $spacer * 1.5,
+  //24px
+  5: $spacer * 3,
+  //48px
+  6: $spacer * 4,
+  //64px
+  7: $spacer * 5,
+  //80px
+  8: $spacer * 6.25,
+  //100px
+  9: $spacer * 7.5,
+  //120px
+  10: $spacer * 9.375,
+  //150px
+  11: $spacer * 2 // 32px,
+);
+//products
+$alpine-blue: #95afd6;
+$alpine-blue-light: #d5dfef;
+$blue-2: #3073c2;
+$blue-2-light: #b1c5e1;
+$plum: #c085ab;
+$plum-light: #e6cedd;
+$blossom-pink: #ce8ea2;
+$blossom-pink-light: #f0dde3;
+$copper: #f29e97;
+$copper-light: #fad9d6;
+$gold: #e0cec3;
+$gold-light: #fdf7f0;
+$dark-bronze: #82756f;
+$dark-bronze-light: #af9d94;
+$lemon: #e9dd8a;
+$lemon-light: #f2ebb9;
+$mint: #add0ba;
+$mint-light: #c5dece;
+$electric-teal: #439093;
+$electric-teal-light: #b4d3d4;
+$pewter: #c1c1c0;
+$pewter-light: #ededed;
+$steel: #a8c3d0;
+$steel-light: #d1dfe5;
+//cta
+$btn-secondary-border-grey: #262a33;
+$btn-tertiary-arrow-grey: #484450;
+$btn-padding: rem(12) rem(32.5);
+$btn-border-radius: rem(54);
+$btn-font-size: rem(16);
+$btn-font-weight: normal;
+$btn-line-height: rem(24);
+$btn-letter-spacing: rem(0.5);
+$btn-animation-timing: 0.3s;
+$transparent: transparent;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "slate": $slate,
+  "soft-white": $soft-white,
+  "white": $soft-white,
+  "hard-white": $hard-white,
+  "turquoise": $turquoise,
+  "amber": $amber,
+  "deep-red": $deep-red,
+  "red": $red,
+  "blue": $blue,
+  "yellow": $yellow,
+  "slate-05": $slate-05,
+  "slate-15": $slate-15,
+  "slate-30": $slate-30,
+  "slate-50": $slate-50,
+  "slate-65": $slate-65,
+  "slate-85": $slate-85,
+  "soft-white-05": $soft-white-05,
+  "soft-white-15": $soft-white-15,
+  "soft-white-30": $soft-white-30,
+  "soft-white-50": $soft-white-50,
+  "soft-white-65": $soft-white-65,
+  "soft-white-85": $soft-white-85,
+  "signal-green": $signal-green,
+  "signal-amber": $signal-amber,
+  "signal-red": $signal-red,
+  "alpine-blue": $alpine-blue,
+  "alpine-blue-light": $alpine-blue-light,
+  "blue-2": $blue-2,
+  "blue-2-light": $blue-2-light,
+  "plum": $plum,
+  "plum-light": $plum-light,
+  "blossom-pink": $blossom-pink,
+  "blossom-pink-light": $blossom-pink-light,
+  "copper": $copper,
+  "copper-light": $copper-light,
+  "gold": $gold,
+  "gold-light": $gold-light,
+  "dark-bronze": $dark-bronze,
+  "dark-bronze-light": $dark-bronze-light,
+  "lemon": $lemon,
+  "lemon-light": $lemon-light,
+  "mint": $mint,
+  "mint-light": $mint-light,
+  "electric-teal": $electric-teal,
+  "electric-teal-light": $electric-teal-light,
+  "pewter": $pewter,
+  "pewter-light": $pewter-light,
+  "steel": $steel,
+  "steel-light": $steel-light,
+  "transparent": $transparent,
+);
